@@ -4,8 +4,9 @@
   tasks:
     - name: Install NIGNX web packages
       ansible.builtin.yum:
-        name: nginx
+        name: httpd
         state: latest
+
     - name: Start NIGNX process
       ansible.builtin.systemd:
         name: nginx
