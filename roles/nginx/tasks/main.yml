@@ -1,0 +1,9 @@
+- name: Install NGINX web packages
+  ansible.builtin.yum:
+    name: httpd
+    state: latest
+- name: Start NGINX process
+  ansible.builtin.systemd:
+    name: nginx
+    state: restarted
+    enabled: yes

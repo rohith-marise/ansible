@@ -2,13 +2,21 @@
   hosts: WEB
   become: true
   tasks:
-    - name: Install NIGNX web packages
+    - name: Install NGINX web packages
       ansible.builtin.yum:
         name: httpd
         state: latest
 
-    - name: Start NIGNX process
+    - name: Start NGINX process
       ansible.builtin.systemd:
         name: nginx
         state: restarted
         enabled: yes
+
+# Now we are doing the above tasks process with roles
+
+- name: First PlayBook
+  hosts: WEB
+  become: true
+  roles:
+    - nginx
