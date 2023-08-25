@@ -1,0 +1,9 @@
+- name: Variables Playbook
+  hosts: WEB
+  vars:
+    MSG: HI Rohith
+  tasks:
+    - name: print/echo variable
+      ansible.builtin.debug:
+        msg: GOOD DAY ! {{ MSG }}
+## ANSIBLE ACCESS VARIABLES WITH TWO FLOWER BRACKETS
