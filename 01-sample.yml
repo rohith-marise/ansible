@@ -9,4 +9,5 @@
     - name: Start NIGNX process
       ansible.builtin.systemd:
         name: nginx
-        state: restarted
+        state: started
+        enable: yes
