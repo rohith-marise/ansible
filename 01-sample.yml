@@ -1,4 +1,4 @@
-- name: First PlayBook
+- name: First tasks PlayBook
   hosts: WEB
   become: true
   tasks:
@@ -15,7 +15,7 @@
 
 # Now we are doing the above tasks process with roles
 
-- name: First PlayBook
+- name: Running from roles PlayBook
   hosts: WEB
   become: true
   roles:
