@@ -1,0 +1,8 @@
+- name: First PlayBook
+  hosts: WEB
+  become: true
+  tasks:
+    - name: Install NIGNX web packages
+      ansible.builtin.yum:
+        name: nginx
+        state: latest
