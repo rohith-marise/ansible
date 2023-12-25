@@ -5,5 +5,5 @@
   tasks:
     - name: print/echo variable
       ansible.builtin.debug:
-        msg: GOOD DAY ! {{ MSG }}
+        msg: GOOD DAY ! {{ MSG here }}
 ## ANSIBLE ACCESS VARIABLES WITH TWO FLOWER BRACKETS
